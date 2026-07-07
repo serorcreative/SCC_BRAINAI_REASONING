@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scc-brainai-reasoning"
+version = "1.0.0"
+description = "Couche de raisonnement de BrainAI — structure la pensée (analyse, décomposition, hypothèses, options, risques, arbitrages, décision candidate). Sans LLM obligatoire, validation humaine, stdlib pur, déterministe, sans réseau."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Proprietary" }
+authors = [{ name = "Seror Créative" }]
+keywords = ["scc", "brainai", "reasoning", "deliberation", "arbitration"]
+dependencies = []
+
+[project.scripts]
+scc-brain-reasoning = "scc_brainai_reasoning.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
